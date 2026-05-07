@@ -1,0 +1,179 @@
+.app-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.app-tag {
+  margin: 0 0 8px;
+  color: #7c96ff;
+  font-size: 0.95rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: clamp(2.1rem, 2.5vw, 3rem);
+}
+
+.app-main {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 900px) {
+  .app-main {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mode-panel,
+.calculator-panel {
+  background: rgba(12, 19, 34, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 22px;
+}
+
+.mode-panel {
+  min-height: 180px;
+}
+
+.calculator-panel {
+  min-height: 620px;
+}
+
+.panel-heading {
+  margin: 0 0 18px;
+  color: #c9d0ff;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(70px, 1fr));
+  gap: 12px;
+}
+
+.display-box,
+.card,
+.control-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+}
+
+.display-box {
+  padding: 18px;
+  min-height: 92px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.display-value {
+  font-size: clamp(1.4rem, 2.2vw, 2.4rem);
+  line-height: 1.1;
+  word-break: break-all;
+}
+
+.display-caption {
+  margin: 0;
+  color: #9ea7ff;
+  font-size: 0.95rem;
+}
+
+.card {
+  padding: 18px;
+}
+
+.control-card {
+  padding: 18px;
+  margin-top: 18px;
+}
+
+button,
+select,
+input {
+  font: inherit;
+}
+
+button {
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(68, 93, 230, 0.95), rgba(59, 74, 146, 0.95));
+  color: white;
+  min-height: 58px;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(10, 22, 80, 0.16);
+}
+
+button.secondary {
+  background: rgba(73, 82, 121, 0.92);
+}
+
+button.wide {
+  grid-column: span 2;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: #c9d0ff;
+  font-weight: 600;
+}
+
+select,
+input {
+  width: 100%;
+  padding: 13px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  color: #eef2ff;
+}
+
+select option,
+input::placeholder {
+  color: #d6dbff;
+}
+
+.calculator-mode-selection {
+  display: grid;
+  gap: 12px;
+}
+
+.mode-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  transition: background 0.16s ease;
+}
+
+.mode-option.active,
+.mode-option:hover {
+  background: rgba(70, 92, 235, 0.16);
+}
+
+.mode-option span {
+  font-weight: 600;
+}
